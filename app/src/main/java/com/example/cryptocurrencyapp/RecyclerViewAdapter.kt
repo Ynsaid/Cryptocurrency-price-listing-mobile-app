@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerViewAdapter(private val cryptoList: List<Crypto>) :RecyclerView.Adapter<RecyclerViewAdapter.CryptoHolderView>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewAdapter.CryptoHolderView {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CryptoHolderView {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_item, parent, false)
         return CryptoHolderView(view)
     }
@@ -20,7 +20,7 @@ class RecyclerViewAdapter(private val cryptoList: List<Crypto>) :RecyclerView.Ad
         val price: TextView = view.findViewById(R.id.cryptoPrice)
     }
 
-    override fun onBindViewHolder(holder: RecyclerViewAdapter.CryptoHolderView, position: Int) {
+    override fun onBindViewHolder(holder: CryptoHolderView, position: Int) {
         val crypto = cryptoList[position]
         holder.name.text = crypto.name
         holder.symbol.text = crypto.symbol

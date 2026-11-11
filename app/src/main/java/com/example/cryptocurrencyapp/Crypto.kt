@@ -1,5 +1,5 @@
 package com.example.cryptocurrencyapp
-// class of api response
+//data class of api response
 data class Crypto (
     val id: String,
     val name: String,
