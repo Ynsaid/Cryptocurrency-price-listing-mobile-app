@@ -30,7 +30,7 @@ class RecyclerViewAdapter(private val cryptoList: List<Crypto>) :RecyclerView.Ad
         val iconResId = getIconForCrypto(crypto.symbol)
         holder.icon.setImageResource(iconResId)
     }
-
+//function to set icons
     private fun getIconForCrypto(symbol: String): Int {
         return when (symbol.lowercase()){
             "btc" -> R.drawable.bitcoin
