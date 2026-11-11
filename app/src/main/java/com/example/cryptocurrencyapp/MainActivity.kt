@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     private fun fetchCryptos() {
         // use retrofit to get the data from the api
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.coinlore.net/api/") // Replace with actual base URL
+            .baseUrl("https://api.coinlore.net/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         // create an instance of the api service
