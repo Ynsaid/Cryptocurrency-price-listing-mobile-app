@@ -1,5 +1,6 @@
 package com.example.cryptocurrencyapp
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class RecyclerViewAdapter(private val cryptoList: List<Crypto>) :RecyclerView.Ad
         val price: TextView = view.findViewById(R.id.cryptoPrice)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: CryptoHolderView, position: Int) {
         val crypto = cryptoList[position]
         holder.name.text = crypto.name
